@@ -1,0 +1,6 @@
+[user]
+	name = Will Storey
+	email = will@summercat.com
+[core]
+	editor = vim
+	excludesfile = /home/will/.gitignore_global
