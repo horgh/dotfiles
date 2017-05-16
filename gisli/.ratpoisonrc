@@ -1,0 +1,49 @@
+exec xrdb -load $HOME/.Xresources
+exec xscreensaver
+# Mouse speed. Does seem to help a bit.
+exec xinput --set-prop "Microsoft Microsoft 3-Button Mouse with IntelliEye(TM)" "libinput Accel Speed" 1
+
+set winfmt %n%s%10t
+set winliststyle row
+
+set font xft:inconsolata:pixelsize=40:antialias=true:hinting=true
+
+# remove pixel border around windows
+# by 'set border 0'
+# but having a border can be useful to show which is focussed
+set border 5
+
+# colour of focused window border
+set fwcolor yellow
+# colour of unfocused window border
+set bwcolor black
+
+# vim like window move around keys
+bind l focusright
+bind k focusup
+bind j focusdown
+bind h focusleft
+
+bind c exec urxvt
+
+# close current window
+bind K delete
+
+bind r remove
+bind R resize
+
+# swap frames
+bind Left exchangeleft
+bind Right exchangeright
+bind Up exchangeup
+bind Down exchangedown
+
+definekey top M-slash exec gmrun
+definekey top C-M-Delete exec xscreensaver-command -lock
+definekey top C-M-Return exec urxvt
+
+# workspaces. see rpws(1)
+exec /home/will/bin/ratpoison-1.4.9/contrib/rpws init 6 -k
+
+set msgwait 5
+set framemsgwait 1

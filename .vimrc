@@ -372,3 +372,7 @@ else
 	colorscheme default
 	set mouse-=a
 endif
+
+if filereadable('~/.vim/env.vim')
+	execute "source ~/.vim/env.vim"
+endif
