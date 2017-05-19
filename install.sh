@@ -27,8 +27,8 @@ function install_common () {
 	ln -s $DIR/.vim/colors/proton.vim ~/.vim/colors/
 
 	mkdir -p ~/.vim/autoload
-	#curl -o ~/.vim/autoload/plug.vim \
-	#	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	curl -o ~/.vim/autoload/plug.vim \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 	rm -rf ~/.bash.d
 	ln -s $DIR/.bash.d ~/
