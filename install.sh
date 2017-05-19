@@ -27,13 +27,32 @@ function install_common () {
 	ln -s $DIR/.vim/colors/proton.vim ~/.vim/colors/
 
 	mkdir -p ~/.vim/autoload
-	curl -o ~/.vim/autoload/plug.vim \
-		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	#curl -o ~/.vim/autoload/plug.vim \
+	#	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+	rm -rf ~/.bash.d
+	ln -s $DIR/.bash.d ~/
+
+	UPDATE_BASHRC=0
+	grep -q HORGHBASHD ~/.bashrc || UPDATE_BASHRC=1
+	if [ $UPDATE_BASHRC -eq 1 ]
+	then
+		echo 'for HORGHBASHD in ~/.bash.d/*; do source $HORGHBASHD; done' >> ~/.bashrc
+	fi
 }
 
 function install_snorri () {
 	rm -f ~/.ratpoisonrc
 	ln -s $DIR/snorri/.ratpoisonrc ~/
+
+	rm -f ~/.gitconfig
+	ln -s $DIR/snorri/.gitconfig ~/
+
+	rm -f ~/.gitignore_global
+	ln -s $DIR/snorri/.gitignore_global ~/
+
+	rm -rf ~/.Xresources
+	ln -s $DIR/snorri/.Xresources ~/
 }
 
 function install_gisli () {
@@ -42,6 +61,9 @@ function install_gisli () {
 
 	rm -f ~/.vim/env.vim
 	ln -s $DIR/gisli/env.vim ~/.vim/
+
+	rm -rf ~/.Xresources
+	ln -s $DIR/gisli/.Xresources ~/
 }
 
 function end_instructions () {

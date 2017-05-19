@@ -1,5 +1,4 @@
 exec xrdb -load $HOME/.Xresources
-#exec feh --bg-center $HOME/images/wallpaper/hatsunebg.jpg
 exec feh --bg-max $HOME/images/wallpaper/lain-ascii-bg.png
 exec xscreensaver
 
