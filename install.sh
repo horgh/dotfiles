@@ -2,7 +2,11 @@
 
 set -e
 
-DIR=$(dirname $0)
+# Script directory. May be relative.
+REL_DIR=$(dirname $0)
+
+# Absolute path to the script directory.
+DIR=$(readlink -f $REL_DIR)
 
 function print_usage () {
 	echo "Usage: $0 <environment>"
@@ -12,26 +16,32 @@ function print_usage () {
 }
 
 function install_common () {
-	cp -a $DIR/.tmux.conf ~/.tmux.conf
+	rm -f ~/.tmux.conf
+	ln -s $DIR/.tmux.conf ~/
 
-	cp -a $DIR/.vimrc ~/.vimrc
+	rm -f ~/.vimrc
+	ln -s $DIR/.vimrc ~/
 
 	mkdir -p ~/.vim/colors
-	cp -a $DIR/.vim/colors/ ~/.vim/colors
+	rm -f ~/.vim/colors/proton.vim
+	ln -s $DIR/.vim/colors/proton.vim ~/.vim/colors/
 
-	# https://github/junegunn/vim-plugin vim plugin manager
 	mkdir -p ~/.vim/autoload
 	curl -o ~/.vim/autoload/plug.vim \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 function install_snorri () {
-	cp -a $DIR/snorri/.ratpoisonrc ~/.ratpoisonrc
+	rm -f ~/.ratpoisonrc
+	ln -s $DIR/snorri/.ratpoisonrc ~/
 }
 
 function install_gisli () {
-	cp -a $DIR/gisli/.ratpoisonrc ~/.ratpoisonrc
-	cp -a $DIR/gisli/env.vim ~/.vim
+	rm -f ~/.ratpoisonrc
+	ln -s $DIR/gisli/.ratpoisonrc ~/
+
+	rm -f ~/.vim/env.vim
+	ln -s $DIR/gisli/env.vim ~/.vim/
 }
 
 function end_instructions () {

@@ -1,3 +1,8 @@
 My personal dotfiles
 
-Install with `./install.sh`. This is destructive.
+Install by running `install.sh`. This is destructive.
+
+
+# Dependencies
+  - Bash
+  - cURL
