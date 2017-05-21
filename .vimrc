@@ -369,6 +369,6 @@ else
 	set mouse-=a
 endif
 
-if filereadable('~/.vim/env.vim')
-	execute "source ~/.vim/env.vim"
+if filereadable($HOME . '/.vim/env.vim')
+	execute "source " . $HOME . "/.vim/env.vim"
 endif
