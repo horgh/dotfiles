@@ -15,7 +15,6 @@ Plug 'fatih/vim-go'
 
 call plug#end()
 
-
 " Enable modeline magic (vim: lines). This defaults to on except if you're root.
 set modeline
 
@@ -88,10 +87,10 @@ highlight OverLength gui=italic,underline,bold
 " that it gets re-added. for example, without it and using 2match on its
 " own, open a file, and then :vsp the same file. One will no longer have
 " the matching.
-autocmd BufWinEnter * 2match OverLength /\%>80v.\+/
+autocmd BufEnter,BufWinEnter,WinEnter,TabEnter * 2match OverLength /\%>80v.\+/
 
 " .roff for rfc. 72 chars max
-autocmd BufWinEnter *.roff 2match OverLength /\%>72v.\+/
+autocmd BufEnter,BufWinEnter,WinEnter,TabEnter *.roff 2match OverLength /\%>72v.\+/
 
 " vim-better-whitespace colouring.
 highlight ExtraWhitespace guifg=blue guibg=red gui=underline
@@ -286,15 +285,12 @@ set noexpandtab
 
 
 "
-" Per file type options.
+" Per filetype options.
 "
 
-" Makefile needs tabs.
-autocmd BufRead,BufNewFile Makefile setlocal noexpandtab
-
-autocmd BufRead,BufNewFile *.json setlocal expandtab
-autocmd BufRead,BufNewFile *.xml setlocal expandtab
-autocmd BufRead,BufNewFile *.conf setlocal expandtab
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.json setlocal expandtab
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.xml setlocal expandtab
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.conf setlocal expandtab
 
 " For plaintext type files, update formatoptions to not include any that deal
 " with comments, and disable comments. Otherwise vim treats characters like '-'
@@ -308,40 +304,40 @@ autocmd BufRead,BufNewFile *.conf setlocal expandtab
 " a reddit comment where someone talked about them being treated as comments.
 " To not treat them as comments, use 'set comments='.
 
-autocmd BufRead,BufNewFile *.txt
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.txt
 			\ setlocal expandtab |
 			\ setlocal textwidth=75 |
 			\ setlocal formatoptions=tn |
 			\ setlocal comments=
 
-autocmd BufRead,BufNewFile *.tex
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.tex
 			\ setlocal textwidth=75
 
-autocmd BufRead,BufNewFile README
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile README
 			\ setlocal expandtab |
 			\ setlocal textwidth=75 |
 			\ setlocal formatoptions=tn |
 			\ setlocal comments=
 
 " I used to have noautoindent on Markdown files. I'm not sure why.
-autocmd BufRead,BufNewFile *.md
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.md
 			\ setlocal expandtab |
 			\ setlocal textwidth=75 |
 			\ setlocal formatoptions=tn |
 			\ setlocal comments=
 
 " PostgreSQL does not like tabs.
-autocmd BufRead,BufNewFile *.sql
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.sql
 			\ setlocal expandtab
 
 " Go standard is to use tabs. In case I use space indentation in some places,
 " include this explicitly.
-autocmd BufRead,BufNewFile *.go
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.go
 			\ setlocal noexpandtab
 
 " Makefiles require tabs. In case I use space indentation in some places,
 " include this explicitly.
-autocmd BufRead,BufNewFile Makefile
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile Makefile
 			\ setlocal noexpandtab
 
 
