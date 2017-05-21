@@ -39,6 +39,9 @@ function install_common () {
 	then
 		echo 'for HORGHBASHD in ~/.bash.d/*; do source $HORGHBASHD; done' >> ~/.bashrc
 	fi
+
+	rm -f ~/.xinitrc
+	ln -s $DIR/.xinitrc ~/
 }
 
 function install_snorri () {
