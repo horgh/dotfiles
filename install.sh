@@ -42,6 +42,9 @@ function install_common () {
 
 	rm -f ~/.xinitrc
 	ln -s $DIR/.xinitrc ~/
+
+	rm -f ~/.Xmodmap
+	ln -s $DIR/.Xmodmap ~/
 }
 
 function install_snorri () {

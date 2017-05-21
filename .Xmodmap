@@ -1,0 +1,6 @@
+! disable esc.
+keycode 9 =
+! map capslock to esc action.
+keycode 66 = Escape
+! disable capslock action.
+clear Lock
