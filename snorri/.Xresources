@@ -32,10 +32,6 @@ URxvt*inheritPixmap: false
 
 URxvt*geometry: 80x24
 
-! Set a TERM that allows colours. Otherwise colour will not work in things like
-! fzf and bash.
-URxvt.termName: xterm-color
-
 Xft*dpi: 99
 Xft*antialias: True
 Xft*hinting: full
