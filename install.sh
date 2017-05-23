@@ -40,6 +40,9 @@ function install_common () {
 		echo 'for HORGHBASHD in ~/.bash.d/*; do source $HORGHBASHD; done' >> ~/.bashrc
 	fi
 
+	curl -o ~/.bash.d/git-prompt.sh
+		https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
 	rm -f ~/.xinitrc
 	ln -s $DIR/.xinitrc ~/
 
