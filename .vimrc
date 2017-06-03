@@ -172,17 +172,31 @@ endfunction
 filetype plugin on
 filetype indent on
 
-" vim-go: Run goimports on save.
+"
+" vim-go options.
+"
+
+" Run goimports on save instead of gofmt. goimports runs the same formatting
+" as gofmt but also updates imports.
+"
+" Unfortunately goimports does not offer the -s flag that gofmt does, and I
+" can't see a way to call both on save (other than something ugly like a
+" wrapper script or using my own hook).
 let g:go_fmt_command = "goimports"
-" vim-go: Enable gometalinter on save. (vet, golint, errcheck)
+
+" Enable gometalinter on save.
 let g:go_metalinter_autosave = 1
-" vim-go: Set gometalinter tools (vet, golint, errcheck)
+
+" Set which gometalinter tools run.
 let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
-" vim-go: Time to let gometalinter run.
+
+" Set time to let gometalinter run. It's asynchronous so a long time is fine.
 let g:go_metalinter_deadline = "15s"
-" vim-go: advance to previous/next error
+
+" Bindings to advance to previous/next error.
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
+
 
 " vim-markdown: Disable the auto folding.
 let g:vim_markdown_folding_disabled = 1
