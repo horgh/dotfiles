@@ -20,9 +20,7 @@ hi Search guibg=#808080 guifg=#ffffff gui=bold
 hi ModeMsg guibg=#f0f0f0 guifg=#304050 gui=bold
 hi MoreMsg guibg=#f0f0f0 guifg=#304050 gui=bold
 
-"hi StatusLine guibg=#808080 guifg=#f0f0f0 gui=bold,italic
 hi StatusLine guibg=#808080 guifg=#f0f0f0 gui=bold
-"hi StatusLineNC guibg=#707070 guifg=#d0d0d0 gui=italic
 hi StatusLineNC guibg=#707070 guifg=#d0d0d0 gui=none
 hi VertSplit guibg=#707070 guifg=#909090 gui=none
 
@@ -37,8 +35,6 @@ hi Operator guifg=#a77039 guibg=#f0f0f0 gui=none
 hi Title guibg=#f0f0f0 guifg=#202020 gui=underline
 
 " Python: @ in front of decorators
-"hi Define guifg=#906000 guibg=#f0e8c0 gui=bold
-"hi Define guifg=#605080 guibg=#ece8f0 gui=italic,bold
 hi Define guifg=#605080 guibg=#ece8f0 gui=bold
 hi Include guifg=#605080 guibg=#dcd8e0 gui=none
 
@@ -49,16 +45,13 @@ hi Repeat guibg=#e0e8d8 guifg=#509030 gui=bold
 hi Exception guibg=#f0f0f0 guifg=#a03020 gui=bold
 
 hi Type guifg=#607080 guibg=#f0f0f0 gui=underline
-"hi PreProc guifg=#605080 guibg=#dcd8e0 gui=italic
 hi PreProc guifg=#605080 guibg=#dcd8e0 gui=none
 hi Identifier guifg=#608050 guibg=#c0e0c0 gui=none
 
 
 hi Constant guifg=#508040 guibg=#f0f0f0
 hi Number guifg=#508040 guibg=#f0f0f0
-"hi String guifg=#a07060 guibg=#f0ece8 gui=italic
 hi String guifg=#a07060 guibg=#f0ece8 gui=none
-"hi Special guifg=#603020 guibg=#f0ece8 gui=italic
 hi Special guifg=#603020 guibg=#f0ece8 gui=none
 
 
@@ -69,4 +62,4 @@ hi DiffText guifg=#8ae234 guibg=#4e9a06
 
 hi SpellBad gui=undercurl guisp=#f02020
 
-
+hi Directory guifg=DarkBlue
