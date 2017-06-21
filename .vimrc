@@ -196,6 +196,9 @@ let g:go_metalinter_deadline = "15s"
 " Bindings to advance to previous/next error.
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
+let g:go_fmt_options = {
+\ 'gofmt': '-s',
+\ }
 
 
 " vim-markdown: Disable the auto folding.
