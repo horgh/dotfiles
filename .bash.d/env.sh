@@ -24,3 +24,7 @@ PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
 # Colourful ls
 eval "$(dircolors -b)"
 alias ls='ls --color=auto'
+
+complete -F _fzf_path_completion -o default -o bashdefault dev/bin/test/prove-this
+complete -F _fzf_path_completion -o default -o bashdefault gvim
+complete -F _fzf_path_completion -o default -o bashdefault vim
