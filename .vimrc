@@ -187,7 +187,7 @@ let g:go_fmt_command = "goimports"
 " Enable gometalinter on save.
 let g:go_metalinter_autosave = 1
 
-" Set which gometalinter tools run.
+" Set which gometalinter tools run on save.
 let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
 
 " Set time to let gometalinter run. It's asynchronous so a long time is fine.
