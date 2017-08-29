@@ -28,3 +28,4 @@ alias ls='ls --color=auto'
 complete -F _fzf_path_completion -o default -o bashdefault dev/bin/test/prove-this
 complete -F _fzf_path_completion -o default -o bashdefault gvim
 complete -F _fzf_path_completion -o default -o bashdefault vim
+complete -F _fzf_path_completion -o default -o bashdefault git
