@@ -126,6 +126,12 @@ let &formatlistpat='^\s*\(\*\|-\|\d\+\.\)\s*'
 
 set encoding=utf-8
 
+" Only open files as UTF-8. The default is to try several different encodings
+" and it can lead to opening files in something than UTF-8 if there is invalid
+" UTF-8 in the file. Even if that's the case I want UTF-8. I never want to
+" open by default. I want to have to choose that.
+set fileencodings=utf-8
+
 " Always show the tab section/line.
 " This applies in both gui and cli mode.
 set showtabline=2
