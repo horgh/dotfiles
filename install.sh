@@ -77,10 +77,10 @@ function install_gisli () {
 
 function end_instructions () {
 	echo "Next steps:"
-	echo "  - :PlugInstall or :PlugUpdate"
+	echo "  - :PlugInstall or :PlugUpdate (installs/updates fzf)"
 	echo "  - :GoInstallBinaries or :GoUpdateBinaries"
 	echo "  - Install ratpoison"
-	echo "  - Install pt"
+	echo "  - Install pt (go get -u github.com/monochromegane/the_platinum_searcher)"
 }
 
 if [ $# -ne 1 ]
