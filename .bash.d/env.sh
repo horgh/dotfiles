@@ -1,10 +1,9 @@
-if [ -n "$GOPATH" ]
+if [ -z "$GOPATH" ]
 then
-	export PATH=$GOPATH/bin:$PATH
-else
-	export PATH=~/go/bin:$PATH
+	export GOPATH=~/go
 fi
 
+export PATH=$GOPATH/bin:$PATH
 export PATH=~/bin/ratpoison-git/src:$PATH
 
 export HISTSIZE=-1
