@@ -80,7 +80,7 @@ function end_instructions () {
 	echo "  - :PlugInstall or :PlugUpdate (installs/updates fzf)"
 	echo "  - :GoInstallBinaries or :GoUpdateBinaries"
 	echo "  - Install ratpoison"
-	echo "  - Install pt (go get -u github.com/monochromegane/the_platinum_searcher)"
+	echo "  - Install pt (go get -u github.com/monochromegane/the_platinum_searcher/cmd/pt)"
 }
 
 if [ $# -ne 1 ]
