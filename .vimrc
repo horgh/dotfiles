@@ -190,6 +190,10 @@ filetype indent on
 " wrapper script or using my own hook).
 let g:go_fmt_command = "goimports"
 
+let g:go_fmt_options = {
+\ 'gofmt': '-s',
+\ }
+
 " Enable gometalinter on save.
 let g:go_metalinter_autosave = 1
 
@@ -202,18 +206,14 @@ let g:go_metalinter_deadline = "15s"
 " Bindings to advance to previous/next error.
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
-let g:go_fmt_options = {
-\ 'gofmt': '-s',
-\ }
-
-
-" vim-markdown: Disable the auto folding.
-let g:vim_markdown_folding_disabled = 1
 
 " Go command status (requires vim-go)
 set statusline+=%#goStatuslineColor#
 set statusline+=%{go#statusline#Show()}
 set statusline+=%*
+
+" vim-markdown: Disable the auto folding.
+let g:vim_markdown_folding_disabled = 1
 
 " jshint2.vim settings
 " Lint after save.
