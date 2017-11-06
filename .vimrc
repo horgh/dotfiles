@@ -182,19 +182,14 @@ filetype indent on
 " vim-go options.
 "
 
-" Run goimports on save instead of gofmt. goimports runs the same formatting
-" as gofmt but also updates imports.
+" I want to run both goimports and gofmt -s. goimports does everything gofmt
+" does, but doesn't currently support -s. (see golang/go#21476).
 "
-" Unfortunately goimports does not offer the -s flag that gofmt does, and I
-" can't see a way to call both on save (other than something ugly like a
-" wrapper script or using my own hook).
-let g:go_fmt_command = "goimports"
+" Since vim-go can't run two separate programs, I use this wrapper to run
+" both.
+let g:go_fmt_command = $HOME . "/dotfiles/scripts/gofmt.sh"
 
-let g:go_fmt_options = {
-\ 'gofmt': '-s',
-\ }
-
-" Enable gometalinter on save.
+" Run gometalinter on save.
 let g:go_metalinter_autosave = 1
 
 " Set which gometalinter tools run on save.
