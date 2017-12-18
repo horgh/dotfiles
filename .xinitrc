@@ -1,1 +1,1 @@
-exec /home/will/bin/ratpoison-git/src/ratpoison
+exec /home/will/code/ratpoison/src/ratpoison
