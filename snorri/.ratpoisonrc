@@ -45,7 +45,7 @@ definekey top C-M-Delete exec xscreensaver-command -lock
 definekey top C-M-Return exec urxvt
 
 # workspaces. see rpws(1)
-exec /home/will/bin/ratpoison-git/contrib/rpws init 6 -k
+exec /home/will/code/ratpoison/contrib/rpws init 6 -k
 
 set msgwait 1
 set framemsgwait 1
