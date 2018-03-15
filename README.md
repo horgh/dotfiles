@@ -4,9 +4,9 @@ Install by running `install.sh`. This is destructive.
 
 
 # Dependencies
-  - Bash
-  - cURL
+- Bash
+- cURL
 
 
 # Other things to set up
-  - ratpoison (in `~/bin/ratpoison-git`)
+- ratpoison (in `~/bin/ratpoison-git`)
