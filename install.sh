@@ -82,7 +82,7 @@ function end_instructions () {
 	echo "- Install ratpoison"
 	echo "- Install pt (go get -u github.com/monochromegane/the_platinum_searcher/cmd/pt)"
 	echo "- Install/update gometalinter (I now do this through its releases):"
-	echo "  (cd ~/go/bin && tar --strip-components=1 -xzvf gometalinter.tar.gz)
+	echo "  (cd ~/go/bin && tar --strip-components=1 -xzvf gometalinter.tar.gz)"
 }
 
 if [ $# -ne 1 ]
