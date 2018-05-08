@@ -5,6 +5,7 @@ fi
 
 export PATH=$GOPATH/bin:$PATH
 export PATH=~/bin/ratpoison-git/src:$PATH
+export PATH=~/code/ratpoison/src:$PATH
 export PATH=~/bin/go/bin:$PATH
 
 export HISTSIZE=-1
