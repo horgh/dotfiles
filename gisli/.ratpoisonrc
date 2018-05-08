@@ -49,3 +49,4 @@ set msgwait 5
 set framemsgwait 1
 
 set obeyresizehints 0
+set onlyborder 0
