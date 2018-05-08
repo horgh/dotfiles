@@ -47,3 +47,5 @@ exec /home/will/code/ratpoison/contrib/rpws init 6 -k
 
 set msgwait 5
 set framemsgwait 1
+
+set obeyresizehints 0

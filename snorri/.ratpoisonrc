@@ -50,6 +50,8 @@ exec /home/will/code/ratpoison/contrib/rpws init 6 -k
 set msgwait 1
 set framemsgwait 1
 
+set obeyresizehints 0
+
 unmanage rpbar
 
 # leave space for bar
