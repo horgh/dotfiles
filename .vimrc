@@ -13,6 +13,10 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go'
 
+" This is a fork of yko/mojo.vim as upstream has an issue where it parses
+" HTML inside curly braces as Perl.
+Plug 'rsrchboy/mojo.vim'
+
 call plug#end()
 
 " Enable modeline magic (vim: lines). This defaults to on except if you're root.
