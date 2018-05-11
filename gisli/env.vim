@@ -10,6 +10,10 @@ set softtabstop=4
 " Make tabs be spaces
 set expandtab
 
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.html.ep setlocal tabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.html.ep setlocal shiftwidth=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.html.ep setlocal softtabstop=2
+
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.js setlocal tabstop=2
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.js setlocal shiftwidth=2
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.js setlocal softtabstop=2
