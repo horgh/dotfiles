@@ -314,6 +314,12 @@ autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.json setlocal expandt
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.xml setlocal expandtab
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.conf setlocal expandtab
 
+" https://github.com/rubocop-hq/ruby-style-guide suggests 2 spaces.
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal tabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal shiftwidth=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal softtabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal expandtab
+
 " For plaintext type files, update formatoptions to not include any that deal
 " with comments, and disable comments. Otherwise vim treats characters like '-'
 " and '*' as being a comment character, which by default sets an increased
