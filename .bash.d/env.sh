@@ -30,3 +30,6 @@ complete -F _fzf_path_completion -o default -o bashdefault dev/bin/test/prove-th
 complete -F _fzf_path_completion -o default -o bashdefault gvim
 complete -F _fzf_path_completion -o default -o bashdefault vim
 complete -F _fzf_path_completion -o default -o bashdefault git
+
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent updatestartuptty /bye > /dev/null
