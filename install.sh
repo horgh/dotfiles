@@ -43,6 +43,10 @@ function install_common () {
 	curl -o ~/.bash.d/git-prompt.sh \
 		https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
+    mkdir -p ~/.gnupg
+    rm -f ~/.gnupg/gpg-agent.conf
+    ln -s $DIR/.gnupg/gpg-agent.conf ~/.gnupg
+
 	rm -f ~/.xinitrc
 	ln -s $DIR/.xinitrc ~/
 
