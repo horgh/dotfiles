@@ -32,9 +32,3 @@ complete -F _fzf_path_completion -o default -o bashdefault vim
 complete -F _fzf_path_completion -o default -o bashdefault git
 
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpg-connect-agent updatestartuptty /bye > /dev/null
-
-# Without these, gpg-agent can ask for a pin on a different tty. I tried
-# forcing use of a GUI pinentry instead but could not get that to work.
-alias ssh="gpg-connect-agent updatestartuptty /bye >/dev/null; ssh"
-alias scp="gpg-connect-agent updatestartuptty /bye >/dev/null; scp"
