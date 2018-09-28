@@ -315,6 +315,10 @@ autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.xml setlocal expandta
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.conf setlocal expandtab
 
 " https://github.com/rubocop-hq/ruby-style-guide suggests 2 spaces.
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile Rakefile setlocal tabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile Rakefile setlocal shiftwidth=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile Rakefile setlocal softtabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile Rakefile setlocal expandtab
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal tabstop=2
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal shiftwidth=2
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal softtabstop=2
