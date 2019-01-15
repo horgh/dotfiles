@@ -37,3 +37,10 @@ if [ -z "$SSH_AUTH_SOCK" ]
 then
     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 fi
+
+HOSTNAME=$(hostname)
+if [ "$HOSTNAME" == "gisli" ]
+then
+    export DEBFULLNAME="William Storey"
+    export DEBEMAIL="wstorey@maxmind.com"
+fi
