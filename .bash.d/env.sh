@@ -33,6 +33,10 @@ complete -F _fzf_path_completion -o default -o bashdefault gvim
 complete -F _fzf_path_completion -o default -o bashdefault vim
 complete -F _fzf_path_completion -o default -o bashdefault git
 
+stty werase undef # Unbind ^w
+bind '"\C-w": vi-forward-bigword'  # Bind ^w to forward a word
+bind '"\C-b": vi-backward-bigword' # Bind ^b to backward a word
+
 if [ -z "$SSH_AUTH_SOCK" ]
 then
     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
