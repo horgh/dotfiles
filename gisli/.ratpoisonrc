@@ -1,5 +1,5 @@
 exec xrdb -load $HOME/.Xresources
-exec feh --bg-max $HOME/maxmind/UHURA-SHIRT.png
+exec feh --bg-center $HOME/maxmind/UHURA-SHIRT.png
 exec xscreensaver
 # Mouse speed. Does seem to help a bit.
 exec xinput --set-prop "Microsoft Microsoft 3-Button Mouse with IntelliEye(TM)" "libinput Accel Speed" 1
