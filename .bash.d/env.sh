@@ -7,6 +7,7 @@ export PATH=$GOPATH/bin:$PATH
 export PATH=~/bin/ratpoison-git/src:$PATH
 export PATH=~/code/ratpoison/src:$PATH
 export PATH=~/bin/go/bin:$PATH
+export PATH=~/bin/node-v10.16.0-linux-x64/bin:$PATH
 
 export HISTSIZE=-1
 export HISTFILESIZE=-1
