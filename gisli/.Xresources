@@ -2,7 +2,7 @@
 ! XPS 13
 urxvt.font:	xft:inconsolata:pixelsize=40:antialias=true:hinting=true
 
-URxvt.background: #eee9e9
+URxvt.background: #f0f0f0
 URxvt.foreground: black
 
 URxvt.scrollBar: False
