@@ -87,6 +87,7 @@ function end_instructions () {
 	echo "- :GoInstallBinaries or :GoUpdateBinaries (installs golangci-lint and more)"
 	echo "- Install ratpoison (if workstation)"
 	echo "- Install pt (go get -u github.com/monochromegane/the_platinum_searcher/cmd/pt)"
+	echo "- Install xst (if need X terminal) (https://github.com/gnotclub/xst)"
 }
 
 if [ $# -ne 1 ]

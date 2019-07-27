@@ -1,9 +1,15 @@
 ! Find font names using this command: fc-list
 ! XPS 13
 urxvt.font:	xft:inconsolata:pixelsize=40:antialias=true:hinting=true
+st.font:	Inconsolata:size=14:antialias=true:hinting=true
 
 URxvt.background: #f0f0f0
 URxvt.foreground: black
+st.background: #f0f0f0
+st.foreground: #000000
+
+st.borderpx: 0
+st.termname: st-256color
 
 URxvt.scrollBar: False
 

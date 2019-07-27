@@ -25,7 +25,7 @@ bind k focusup
 bind j focusdown
 bind h focusleft
 
-bind c exec urxvt
+bind c exec xst
 
 # close current window
 bind K delete
@@ -41,7 +41,7 @@ bind Down exchangedown
 
 definekey top M-slash exec gmrun
 definekey top C-M-Delete exec xscreensaver-command -lock
-definekey top C-M-Return exec urxvt
+definekey top C-M-Return exec xst
 
 # workspaces. see rpws(1)
 exec /home/will/code/ratpoison/contrib/rpws init 6 -k
