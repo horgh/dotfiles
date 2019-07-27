@@ -28,7 +28,7 @@ set title
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set background=dark
+set background=light
 
 " Keep 50 lines of command line history
 set history=50
@@ -397,7 +397,8 @@ if has("gui_running")
 	" Let mouse work for things like clicking to move cursor.
 	set mouse=a
 else
-	colorscheme default
+	colorscheme proton-cterm
+	set t_Co=256 " Tell vim the terminal supports 256 colours.
 	set mouse-=a
 endif
 
