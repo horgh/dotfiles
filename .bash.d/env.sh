@@ -17,8 +17,7 @@ export HISTFILESIZE=-1
 export FZF_DEFAULT_COMMAND='pt -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# Make fzf use colours. This appears to be automatic for some TERM variables.
-export FZF_DEFAULT_OPTS="--color=16"
+export FZF_DEFAULT_OPTS="--color=light"
 
 export GO111MODULE=on
 
