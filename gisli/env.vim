@@ -10,6 +10,9 @@ set softtabstop=4
 " Make tabs be spaces
 set expandtab
 
+" I see errors from this when keeping gvim running on a Chromebook.
+set noswapfile
+
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.html.ep setlocal tabstop=2
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.html.ep setlocal shiftwidth=2
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.html.ep setlocal softtabstop=2
