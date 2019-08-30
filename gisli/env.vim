@@ -30,5 +30,5 @@ autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.go setlocal shiftwidt
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.go setlocal softtabstop=2
 
 if has("gui_running")
-	set guifont=Inconsolata\ Medium\ 10
+	set guifont=Inconsolata\ Medium\ 13
 endif
