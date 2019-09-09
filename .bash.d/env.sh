@@ -46,3 +46,6 @@ then
 fi
 
 unset PROMPT_COMMAND # MM sets this in /etc/profile.d. I don't need it.
+
+# docker-credential-gcloud is here when using the SDK from a snap.
+export PATH=/snap/google-cloud-sdk/current/bin:$PATH
