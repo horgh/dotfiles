@@ -11,7 +11,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'Shutnik/jshint2.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'plasticboy/vim-markdown'
-Plug 'fatih/vim-go'
+Plug 'dense-analysis/ale'
 
 " This is a fork of yko/mojo.vim as upstream has an issue where it parses
 " HTML inside curly braces as Perl.
@@ -182,34 +182,9 @@ endfunction
 filetype plugin on
 filetype indent on
 
-"
-" vim-go options.
-"
-
-" I want to run both goimports and gofmt -s. goimports does everything gofmt
-" does, but doesn't currently support -s. (see golang/go#21476).
-"
-" Since vim-go can't run two separate programs, I use this wrapper to run
-" both.
-let g:go_fmt_command = $HOME . "/dotfiles/scripts/gofmt.sh"
-
-" Run gometalinter on save.
-let g:go_metalinter_autosave = 1
-
-" Set which gometalinter tools run on save.
-let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
-
-" Set time to let gometalinter run. It's asynchronous so a long time is fine.
-let g:go_metalinter_deadline = "15s"
-
 " Bindings to advance to previous/next error.
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
-
-" Go command status (requires vim-go)
-set statusline+=%#goStatuslineColor#
-set statusline+=%{go#statusline#Show()}
-set statusline+=%*
 
 " vim-markdown: Disable the auto folding.
 let g:vim_markdown_folding_disabled = 1
@@ -220,6 +195,15 @@ let jshint2_save = 1
 
 " Use urxvt instead of xterm (:FZF)
 let g:fzf_launcher = 'urxvt -geometry 120x30 -e sh -c %s'
+
+
+" ale
+let g:ale_linters = {'go':['gofmt','golint','go vet','golangci-lint']}
+let ale_go_golangci_lint_options = '--exclude-use-default=false'
+let g:ale_fix_on_save = 1
+" Navigate between errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 
 "
