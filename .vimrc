@@ -200,6 +200,7 @@ let g:fzf_launcher = 'urxvt -geometry 120x30 -e sh -c %s'
 " ale
 let g:ale_linters = {'go':['gofmt','golint','go vet','golangci-lint']}
 let g:ale_go_golangci_lint_options = '--exclude-use-default=false'
+let g:ale_go_golangci_lint_package = 1
 
 let g:ale_fixers = {'go':['gofmt','goimports']}
 let g:ale_fix_on_save = 1
