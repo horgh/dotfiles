@@ -199,14 +199,21 @@ let g:fzf_launcher = 'urxvt -geometry 120x30 -e sh -c %s'
 
 " ale
 let g:ale_linters = {'go':['gofmt','golint','go vet','golangci-lint']}
+
+let g:ale_go_gofmt_options = '-s'
+
 let g:ale_go_golangci_lint_options = '--exclude-use-default=false'
 let g:ale_go_golangci_lint_package = 1
 
 let g:ale_fixers = {'go':['gofmt','goimports']}
 let g:ale_fix_on_save = 1
-let g:ale_go_gofmt_options = '-s'
 
-" Navigate between errors
+" Only run linters I define. Otherwise it enables a bunch of others by default
+" which can recommend incorrect things, e.g. YAML linter which conflicts with
+" what the repo might enforce.
+let g:ale_linters_explicit = 1
+
+" Navigate between errors.
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
