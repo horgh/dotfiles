@@ -369,6 +369,9 @@ autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile Makefile
 			\ setlocal noexpandtab
 
 
+autocmd BufReadPost *.ts setlocal syntax=javascript
+
+
 "
 " gvim/vim only options.
 "
