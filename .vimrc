@@ -320,6 +320,11 @@ autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal shiftwidt
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal softtabstop=2
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.rb setlocal expandtab
 
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.yml setlocal tabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.yml setlocal shiftwidth=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.yml setlocal softtabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.yml setlocal expandtab
+
 " For plaintext type files, update formatoptions to not include any that deal
 " with comments, and disable comments. Otherwise vim treats characters like '-'
 " and '*' as being a comment character, which by default sets an increased
