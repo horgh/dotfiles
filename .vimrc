@@ -374,7 +374,11 @@ autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile Makefile
 			\ setlocal noexpandtab
 
 
-autocmd BufReadPost *.ts setlocal syntax=javascript
+autocmd BufReadPost *.ts setlocal ft=javascript
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal tabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal shiftwidth=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal softtabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal expandtab
 
 
 "
