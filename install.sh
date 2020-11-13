@@ -11,7 +11,7 @@ DIR=$(readlink -f $REL_DIR)
 function print_usage () {
 	echo "Usage: $0 <environment>"
 	echo ""
-	echo "  Environment is one of: snorri, gisli"
+	echo "  Environment is one of: snorri, maxmind"
 	echo ""
 }
 
@@ -70,9 +70,9 @@ function install_snorri () {
 	ln -s $DIR/snorri/.gitignore_global ~/
 }
 
-function install_gisli () {
+function install_maxmind () {
 	rm -f ~/.vim/env.vim
-	ln -s $DIR/gisli/env.vim ~/.vim/
+	ln -s $DIR/maxmind/env.vim ~/.vim/
 }
 
 function end_instructions () {
@@ -97,10 +97,10 @@ then
 	exit 0
 fi
 
-if [ "$1" == "gisli" ]
+if [ "$1" == "maxmind" ]
 then
 	install_common
-	install_gisli
+	install_maxmind
 	end_instructions
 	exit 0
 fi
