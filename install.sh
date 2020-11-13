@@ -49,36 +49,30 @@ function install_common () {
     rm -f ~/.gnupg/gpg-agent.conf
     ln -s $DIR/.gnupg/gpg-agent.conf ~/.gnupg
 
+	rm -f ~/.ratpoisonrc
+	ln -s $DIR/snorri/.ratpoisonrc ~/
+
 	rm -f ~/.xinitrc
 	ln -s $DIR/.xinitrc ~/
 
 	rm -f ~/.Xmodmap
 	ln -s $DIR/.Xmodmap ~/
-}
-
-function install_snorri () {
-	rm -f ~/.ratpoisonrc
-	ln -s $DIR/snorri/.ratpoisonrc ~/
-
-	rm -f ~/.gitconfig
-	ln -s $DIR/snorri/.gitconfig ~/
-
-	rm -f ~/.gitignore_global
-	ln -s $DIR/snorri/.gitignore_global ~/
 
 	rm -rf ~/.Xresources
 	ln -s $DIR/snorri/.Xresources ~/
 }
 
-function install_gisli () {
-	rm -f ~/.ratpoisonrc
-	ln -s $DIR/gisli/.ratpoisonrc ~/
+function install_snorri () {
+	rm -f ~/.gitconfig
+	ln -s $DIR/snorri/.gitconfig ~/
 
+	rm -f ~/.gitignore_global
+	ln -s $DIR/snorri/.gitignore_global ~/
+}
+
+function install_gisli () {
 	rm -f ~/.vim/env.vim
 	ln -s $DIR/gisli/env.vim ~/.vim/
-
-	rm -rf ~/.Xresources
-	ln -s $DIR/gisli/.Xresources ~/
 }
 
 function end_instructions () {

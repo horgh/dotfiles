@@ -32,13 +32,6 @@ then
     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 fi
 
-HOSTNAME=$(hostname)
-if [ "$HOSTNAME" == "gisli" ]
-then
-    export DEBFULLNAME="William Storey"
-    export DEBEMAIL="wstorey@maxmind.com"
-fi
-
 unset PROMPT_COMMAND # MM sets this in /etc/profile.d. I don't need it.
 
 # docker-credential-gcloud is here when using the SDK from a snap.
