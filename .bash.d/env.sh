@@ -3,6 +3,10 @@ export PATH=~/code/ratpoison/src:$PATH
 export PATH=~/bin/go/bin:$PATH
 export PATH=~/bin/node-v10.16.0-linux-x64/bin:$PATH
 
+# Chromebook
+export PATH=~/.gem/ruby/2.5.0/bin/:$PATH
+export PATH=~/go/bin:$PATH
+
 export HISTSIZE=-1
 export HISTFILESIZE=-1
 
