@@ -28,6 +28,8 @@ function install_common () {
 	rm -f ~/.vim/colors/proton-cterm.vim
 	ln -s $DIR/.vim/colors/proton-cterm.vim ~/.vim/colors/
 
+    ln -s $DIR/.vim/after ~/.vim/after
+
 	mkdir -p ~/.vim/autoload
 	curl -o ~/.vim/autoload/plug.vim \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
