@@ -62,6 +62,9 @@ function install_common () {
 
 	rm -rf ~/.Xresources
 	ln -s $DIR/snorri/.Xresources ~/
+
+	rm -rf ~/.xscreensaver
+	ln -s $DIR/snorri/.xscreensaver ~/
 }
 
 function install_snorri () {
