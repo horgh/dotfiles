@@ -2,9 +2,6 @@ exec xrdb -load $HOME/.Xresources
 exec feh --bg-max $HOME/images/wallpaper/lain-ascii-bg.png
 exec xscreensaver
 
-# rpbar font: inconsolata:pixelsize=20
-exec /home/will/bin/rpbar/rpbar
-
 set winfmt %n%s%10t
 set winliststyle row
 
@@ -52,16 +49,3 @@ set framemsgwait 1
 
 set obeyresizehints 0
 set onlyborder 0
-
-unmanage rpbar
-
-# leave space for bar
-set padding 0 0 0 25
-
-# hooks
-addhook switchwin    exec /home/will/bin/rpbar/rpbarsend
-addhook switchframe  exec /home/will/bin/rpbar/rpbarsend
-addhook switchgroup  exec /home/will/bin/rpbar/rpbarsend
-addhook deletewindow exec /home/will/bin/rpbar/rpbarsend
-addhook titlechanged exec /home/will/bin/rpbar/rpbarsend
-addhook newwindow    exec /home/will/bin/rpbar/rpbarsend
