@@ -1,11 +1,17 @@
 export PATH=~/bin/ratpoison-git/src:$PATH
 export PATH=~/code/ratpoison/src:$PATH
-export PATH=~/bin/go/bin:$PATH
-export PATH=~/bin/node-v10.16.0-linux-x64/bin:$PATH
 
-# Chromebook
-export PATH=~/.gem/ruby/2.5.0/bin/:$PATH
+# For Go.
+export PATH=~/bin/go/bin:$PATH
+
+# For pt, etc.
 export PATH=~/go/bin:$PATH
+
+# ruby-install path.
+export PATH=~/.rubies/ruby-3.2.0/bin:$PATH
+
+# Ruby gems.
+export PATH=~/.gem/ruby/3.2.0/bin:$PATH
 
 export HISTSIZE=-1
 export HISTFILESIZE=-1
