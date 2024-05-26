@@ -381,6 +381,13 @@ autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal softtabst
 autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal expandtab
 
 
+autocmd BufReadPost *.gohtml setlocal ft=html
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal tabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal shiftwidth=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal softtabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal expandtab
+
+
 "
 " gvim/vim only options.
 "
