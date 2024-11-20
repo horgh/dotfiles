@@ -12,6 +12,7 @@ Plug 'Shutnik/jshint2.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'plasticboy/vim-markdown'
 Plug 'dense-analysis/ale'
+Plug 'fatih/vim-go'
 
 " This is a fork of yko/mojo.vim as upstream has an issue where it parses
 " HTML inside curly braces as Perl.
@@ -216,6 +217,13 @@ let g:ale_linters_explicit = 1
 " Navigate between errors.
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+
+" vim-go
+
+" vim-go gopls
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 
 "
