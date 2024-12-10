@@ -390,10 +390,10 @@ autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal expandtab
 
 
 autocmd BufReadPost *.gohtml setlocal ft=html
-autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal tabstop=2
-autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal shiftwidth=2
-autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal softtabstop=2
-autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.ts setlocal expandtab
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.gohtml setlocal tabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.gohtml setlocal shiftwidth=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.gohtml setlocal softtabstop=2
+autocmd BufRead,BufWinEnter,WinEnter,TabEnter,BufNewFile *.gohtml setlocal expandtab
 
 
 "
