@@ -224,6 +224,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " vim-go gopls
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+let g:go_rename_command = 'gopls'
 
 
 "
