@@ -7,11 +7,11 @@ export PATH=~/bin/go/bin:$PATH
 # For pt, etc.
 export PATH=~/go/bin:$PATH
 
-# ruby-install path.
-export PATH=~/.rubies/ruby-3.3.2/bin:$PATH
+# Where ruby-install puts Ruby.
+export PATH=~/.rubies/ruby-3.4.1/bin:$PATH
 
 # Ruby gems.
-export PATH=~/.gem/ruby/3.3.0/bin:$PATH
+export PATH=~/.gem/ruby/3.4.0/bin:$PATH
 
 export HISTSIZE=-1
 export HISTFILESIZE=-1
