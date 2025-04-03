@@ -8,7 +8,7 @@ export PATH=~/bin/go/bin:$PATH
 export PATH=~/go/bin:$PATH
 
 # Where ruby-install puts Ruby.
-export PATH=~/.rubies/ruby-3.4.1/bin:$PATH
+export PATH=~/.rubies/ruby-3.4.2/bin:$PATH
 
 # Ruby gems.
 export PATH=~/.gem/ruby/3.4.0/bin:$PATH
